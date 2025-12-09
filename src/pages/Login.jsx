@@ -1,9 +1,6 @@
 import { useState } from "react";
-
-import { useNavigate } from "react-router-dom";
-
+import { useNavigate, Link } from "react-router-dom";
 import { loginUser } from "../services/api";
-
 import { useAuth } from "../context/AuthContext";
 
 export default function Login() {
@@ -117,7 +114,10 @@ export default function Login() {
 
                 <div className="text-center mt-4">
                   <small className="text-secondary">
-                    ¿Problemas para ingresar? Contacte al administrador
+                    ¿No tienes cuenta?{" "}
+                    <Link to="/registro" className="text-decoration-none" style={{ color: "#2c5282" }}>
+                      Regístrate aquí
+                    </Link>
                   </small>
                 </div>
               </div>
